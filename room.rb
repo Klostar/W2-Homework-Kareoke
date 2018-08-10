@@ -42,4 +42,6 @@ end
 def entry_fee
   return @entry_fee
 end
+
+
 end
