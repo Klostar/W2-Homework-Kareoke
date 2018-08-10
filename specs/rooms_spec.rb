@@ -13,8 +13,8 @@ class RoomTest < MiniTest::Test
     @g3 = Guest.new("Katie A")
     @g4 = Guest.new("Amy B")
     @g5 = Guest.new("Nick L")
-    @room1 = Room.new("Room1")
-    @room2 = Room.new("Room2")
+    @room1 = Room.new("Room1",4)
+    @room2 = Room.new("Room2",4)
   end
 
   def test_room_has_name
@@ -37,11 +37,14 @@ class RoomTest < MiniTest::Test
   end
 
 
+  def test_add_song_to_room
+    @room1.add_song(@song1)
+    assert_equal(1, @room1.songs.count)
 
-def test_add_song_to_room
-  @room1.add_song(@song1)
-  assert_equal(1, @room1.songs.count)
+  end
 
-end
+  def test_capacity
+    assert_equal(4,@room1.capacity)
+  end
 
 end
