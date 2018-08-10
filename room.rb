@@ -1,8 +1,9 @@
 class Room
 
-  attr_reader(:guests,:songs,:name,:capacity)
+  attr_reader(:guests,:songs,:name)
+  attr_accessor(:capacity)
 
-  def initialize(name,capacity)
+  def initialize(name)
     @guests = []
     @songs = []
     @name = name
@@ -31,7 +32,10 @@ class Room
   end
 
 def room_capacity
-@room1.capacity
+@capacity
+return "Sorry, Room is full" if @capacity > 4
+else
+  return "Enjoy your night!"
 end
 
 

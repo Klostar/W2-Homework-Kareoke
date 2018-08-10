@@ -13,8 +13,8 @@ class RoomTest < MiniTest::Test
     @g3 = Guest.new("Katie A")
     @g4 = Guest.new("Amy B")
     @g5 = Guest.new("Nick L")
-    @room1 = Room.new("Room1",4)
-    @room2 = Room.new("Room2",4)
+    @room1 = Room.new("Room1")
+    @room2 = Room.new("Room2")
   end
 
   def test_room_has_name
@@ -46,5 +46,10 @@ class RoomTest < MiniTest::Test
   def test_capacity
     assert_equal(4,@room1.capacity)
   end
+
+def test_room_is_full
+  @room1.capacity += 1
+  assert_equal("Sorry, Room is full" , @room1.room_capacity)
+end
 
 end
