@@ -7,10 +7,10 @@ require_relative("../room.rb")
 class GuestTest < MiniTest::Test
 
   def setup()
-    @guest1 = Guest.new("Ryan", 55)
-    @guest2 = Guest.new("Dan", 40)
-    @guest3 = Guest.new("Katie", 45)
-    @guest4 = Guest.new("Amy", 50)
+    @guest1 = Guest.new("Ryan", 55,"Fernando")
+    @guest2 = Guest.new("Dan", 40, "Highway To Hell")
+    @guest3 = Guest.new("Katie", 45,"Sunshine On Leith")
+    @guest4 = Guest.new("Amy", 50,"Take On Me")
   end
 
   def test_guest_has_name
@@ -23,6 +23,10 @@ assert_equal(55, @guest1.wallet)
 
 def test_customer_pays_entry
   assert_equal(35, @guest2.pay_entry_fee)
+end
+
+def test_customers_fav_song
+  assert_equal("Sunshine On Leith",@guest3.fav_song)
 end
 
 end
