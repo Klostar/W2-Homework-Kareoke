@@ -1,6 +1,6 @@
 class Room
 
-  attr_reader(:guests,:songs,:name)
+  attr_reader(:guests,:songs,:name,:entry_fee)
   attr_accessor(:capacity,:entry_fee)
 
   def initialize(name)

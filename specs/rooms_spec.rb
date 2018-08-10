@@ -56,4 +56,6 @@ def test_entry_fee
   assert_equal(5, @room1.entry_fee)
 end
 
+
+
 end
