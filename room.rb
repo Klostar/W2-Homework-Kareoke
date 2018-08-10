@@ -1,13 +1,14 @@
 class Room
 
   attr_reader(:guests,:songs,:name)
-  attr_accessor(:capacity)
+  attr_accessor(:capacity,:entry_fee)
 
   def initialize(name)
     @guests = []
     @songs = []
     @name = name
     @capacity = 4
+    @entry_fee = 5
   end
 
   def room_name
@@ -38,6 +39,7 @@ else
   return "Enjoy your night!"
 end
 
-
-
+def entry_fee
+  return @entry_fee
+end
 end

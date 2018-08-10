@@ -52,4 +52,8 @@ def test_room_is_full
   assert_equal("Sorry, Room is full" , @room1.room_capacity)
 end
 
+def test_entry_fee
+  assert_equal(5, @room1.entry_fee)
+end
+
 end
