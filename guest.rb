@@ -14,6 +14,9 @@ def pay_entry_fee
   @wallet -= @entry_fee
 end
 
-
+def customer_fav_song_on_playlist()
+  return "WOOHOO!" if @guest.fav_song == @song3.name
+else return "Sorry, We don't have that song!"
+end
 
 end
